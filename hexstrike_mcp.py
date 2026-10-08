@@ -5463,9 +5463,7 @@ def main():
         logger.info("🚀 Starting HexStrike AI MCP server")
         logger.info("🤖 Ready to serve AI agents with enhanced cybersecurity capabilities")
         mcp.run(
-            transport="http",
-            host="0.0.0.0",
-            port=int(os.environ.get("PORT", "8000")),
+            transport="streamable-http",
         )
     except Exception as e:
         logger.error(f"💥 Error starting MCP server: {str(e)}")
