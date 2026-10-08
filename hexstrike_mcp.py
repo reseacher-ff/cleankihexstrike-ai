@@ -279,14 +279,14 @@ def setup_mcp_server(hexstrike_client: HexStrikeClient) -> FastMCP:
         Configured FastMCP instance
     """
     mcp = FastMCP(
-    "HexStrike AI",
-    transport_security=TransportSecuritySettings(
-        allowed_hosts=[
-            "myhfff-production.up.railway.app",
-            "myhfff-production.up.railway.app:*",
-        ]
-    ),
-)
+        "HexStrike AI",
+        transport_security=TransportSecuritySettings(
+            allowed_hosts=[
+                "myhfff-production.up.railway.app",
+                "myhfff-production.up.railway.app:*",
+            ]
+        ),
+    )
 
     # ============================================================================
     # CORE NETWORK SCANNING TOOLS
