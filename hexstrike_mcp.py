@@ -142,7 +142,7 @@ logger = logging.getLogger(__name__)
 # Default configuration
 DEFAULT_HEXSTRIKE_SERVER = os.environ.get(
     "HEXSTRIKE_SERVER",
-    "https://myhf-production.up.railway.app"
+    "https://myhf-production.up.railway.app/"
 )  # Default HexStrike server URL
 DEFAULT_REQUEST_TIMEOUT = 300  # 5 minutes default timeout for API requests
 MAX_RETRIES = 3  # Maximum number of retries for connection attempts
