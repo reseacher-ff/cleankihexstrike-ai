@@ -27,6 +27,7 @@ import time
 from datetime import datetime
 
 from mcp.server.fastmcp import FastMCP
+from mcp.server.transport_security import TransportSecuritySettings
 
 class HexStrikeColors:
     """Enhanced color palette matching the server's ModernVisualEngine.COLORS"""
@@ -277,7 +278,15 @@ def setup_mcp_server(hexstrike_client: HexStrikeClient) -> FastMCP:
     Returns:
         Configured FastMCP instance
     """
-    mcp = FastMCP("hexstrike-ai-mcp")
+    mcp = FastMCP(
+    "HexStrike AI",
+    transport_security=TransportSecuritySettings(
+        allowed_hosts=[
+            "myhfff-production.up.railway.app",
+            "myhfff-production.up.railway.app:*",
+        ]
+    ),
+)
 
     # ============================================================================
     # CORE NETWORK SCANNING TOOLS
